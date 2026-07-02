@@ -1,0 +1,27 @@
+# MCP Server
+mcp>=1.0.0
+
+# LLM
+openai>=1.30.0
+pydantic>=2.0.0
+
+# Word
+python-docx>=1.1.0
+docxtpl>=0.18.0
+Jinja2>=3.1.0
+
+# Excel
+xlsxwriter>=3.2.0
+openpyxl>=3.1.0
+pandas>=2.0.0
+
+# Diagram
+graphviz>=0.20.0
+Pillow>=10.0.0
+
+# Visio
+vsdx>=0.6.0
+pywin32>=306
+
+# Utilities
+pyyaml>=6.0.0

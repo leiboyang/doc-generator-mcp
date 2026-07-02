@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "doc-generator": {
+      "command": "<替换为start.bat的绝对路径>",
+      "args": [],
+      "env": {
+        "START_MCP_TIMEOUT_MS": "30000",
+        "RUN_MCP_TIMEOUT_MS": "120000"
+      }
+    }
+  }
+}

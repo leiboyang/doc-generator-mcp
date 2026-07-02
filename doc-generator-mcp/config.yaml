@@ -1,0 +1,55 @@
+# MCP Server 配置
+server:
+  name: "doc-generator"
+  version: "0.1.0"
+
+# LLM 配置
+llm:
+  provider: "openai"  # openai / local
+  model: "gpt-4o"
+  api_key: ""  # 通过环境变量 LLM_API_KEY 设置
+  base_url: ""  # 可选，用于本地模型
+  temperature: 0.3
+  max_retries: 3
+
+# 路径配置
+paths:
+  template_dir: "./templates"
+  output_dir: "./output"
+  few_shot_dir: "./examples/few_shot"
+
+# 生成配置
+generation:
+  max_retries: 3
+  auto_backup: true
+  default_diagram_engine: "mermaid"  # mermaid / graphviz / com
+
+# 经验记录
+experience:
+  enabled: true
+  dir: "./experiences"
+  # 操作后自动记录经验
+  auto_log: true
+  # 查询时默认回溯天数
+  default_lookback_days: 7
+
+# 备份策略
+backup:
+  # 单备份模式: 每个文件只保留一份原始备份
+  strategy: "single"
+  # 备份命名后缀
+  suffix: "_原始副本"
+
+# 格式保持
+format_preservation:
+  # 编辑文档时默认保持原始格式
+  preserve_format: true
+  # 插入段落时继承相邻段落格式
+  inherit_style: true
+
+# 路由规则
+routing:
+  # 超过此行数使用 Code Interpreter 模式
+  code_interpreter_row_threshold: 1000
+  # 公式数量超过此值使用 Code Interpreter
+  code_interpreter_formula_threshold: 5
